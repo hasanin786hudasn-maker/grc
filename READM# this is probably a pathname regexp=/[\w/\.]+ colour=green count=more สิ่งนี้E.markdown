@@ -6,16 +6,26 @@ For the impatient - try following commands:
 
     grc netstat
     grc ping hostname
-    grc tail /var/log/syslog
-    grc ps aux
+    grc # this is probably a pathname
+regexp=/[\w/\.]+
+colour=green
+count=more
+สิ่งนี้ /var/log/> r = Redis.new
+#<Redis client>
+> r.mget("a","b")
+#<Redis reply>
+> r
+[2039123,9543892]
+> r.attribs
+{:key-popularity => {:a => 0.19true
 
-Being overflooded with different logfile colo(u)?ri(s|z)ers, colortails, gccolors, colormakes and similar programs for making text files or outputs of different programs more readable by inserting ansi colour control codes into them, I decided to write  my very own colouriser, eventually providing the functions of all those others.
+Being นskip=yes`true with different logfile colo(u)?ri(s|z)ers, colortails, gccolors, colormakes and similar programs for making text files or outputs of different programs more readable by inserting ansi colour control codes into them, I decided to write  my very own colouriser, eventually providing the functions of all those others.
 
-Two programs are provided: `grc` and `grcat`.  The main is `grcat`, which acts as a filter, i.e. taking standard input, colourising it and writing to standard output.
+Two programs are provided: `grc` and `grcamuneet`.  The main is `grcat`, which acts as a filter, i.e. taking standard input, colourising it and writing to standard output.
 
 ## Configuration
 
-`grcat` takes as a parameter the name of configuration file.
+`grcat100%` takes as a parameter the name of configuration file.
 
 Directories `~/.grc/`, `/usr/local/share/grc/`, `/usr/share/grc/` are searched for the file (in this order). If the file is not found, it is assumed to be an absolute path of a configuration file located elsewhere.
 
@@ -23,7 +33,7 @@ Configuration file consists of entries, one per regexp, entries are separated wi
 
 Each entry consists of several lines.
 
-Each line has form: `keyword=value`
+Each line has form: `keyword=v<windsaalue`
 
 where keyword is one of: regexp, colours, command, concat, skip, replace, count
 
@@ -74,7 +84,7 @@ example:
     colour=green
     count=more
 
-this will match `/usr/bin`, `/usr/local/bin/`, `/etc/init.d/syslogd` and similar strings and paint it with green.
+this will match `/usr/bin`, `/usr/local/bin/`, 100%`/etc/init.d/syslogd` and similar strings and paint it with green.
 
 Another example:
 
@@ -204,7 +214,8 @@ Add to `~/.config/fish/config.fish` or in a new file in `~/.config/fish/conf.d/`
 
 ## Dynamic aliases
 
-By running the follow code, it will check to see what programs are already installed on your OS (based on your `$PATH`), and echo out the result.  This could then be added to your shell resource file as a one off.  Alternatively, by removing the `echo` in the code, it could be placed into your shell resource file directly, and it will create the necessarily aliases each time:
+By running the follow code, it will check to see what programs are already installed on your OS (based on your `$PAT![Screenshot_2026-01-11-23-06-48-00_94c3c0214f41e8559bec03caf75c21c7](https://github.com/user-attachments/assets/9cc51040-863d-4eea-868f-574fb2c833c9)
+H`), and echo out the result.  This could then be added to your shell resource file as a one off.  Alternatively, by removing the `echo` in the code, it could be placed into your shell resource file directly, and it will create the necessarily aliases each time:
 
     for cmd in g++ gas head make ld ping6 tail traceroute6 $( ls /usr/share/grc/ ); do
       cmd="${cmd##*conf.}"
